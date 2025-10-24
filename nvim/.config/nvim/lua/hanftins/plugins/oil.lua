@@ -10,8 +10,9 @@ return {
   config = function()
     require("oil").setup({
       keymaps = {
-        ["<C-h>"] = false,  -- Disable the horizontal split action
-        ["<C-l>"] = false,  -- Disable the horizontal split action
+        ["<C-h>"] = false,
+        ["<C-l>"] = false,
+        ["<C-p>"] = "actions.refresh",
       },
       default_file_explorer = true,  -- Auto-open on directory buffers
       columns = { "icon", "permissions", "size", "mtime" },  -- Customize view
