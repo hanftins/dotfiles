@@ -52,20 +52,6 @@ keymap.set("n", "<leader>bx", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all buffers
 
 keymap.set("x", "Y", "y$", { desc = "Yank to end of line" })
 
--- scrolling
-keymap.set("n", "<C-d>", "<C-d>zz")
-keymap.set("n", "<C-u>", "<C-u>zz")
-keymap.set("n", "n", "nzzzv")
-keymap.set("n", "N", "Nzzzv")
-keymap.set("n", "}", "}zzzv")
-keymap.set("n", "{", "{zzzv")
-keymap.set("n", "<C-f>", "<C-f>zzzv")
-keymap.set("n", "<C-b>", "<C-b>zzzv")
-keymap.set("n", "gd", "gdzzzv")
-keymap.set("n", "gD", "gDzzzv")
-keymap.set("n", "gg", "ggzzzv")
-keymap.set("n", "G", "Gzzzv")
-
 -- indenting
 keymap.set("v", "<A-h>", "<gv", { desc = "Indent left" })
 keymap.set("v", "<A-l>", ">gv", { desc = "Indent right" })

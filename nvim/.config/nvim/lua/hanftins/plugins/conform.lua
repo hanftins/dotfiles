@@ -10,7 +10,7 @@ return {
 				swift = { "swiftformat" },
 			},
 			format_on_save = function()
-				return { timeout_ms = 500, lsp_fallback = true }
+				return { timeout_ms = 3000, lsp_fallback = true }
 			end,
 			log_level = vim.log.levels.error,
 		})
