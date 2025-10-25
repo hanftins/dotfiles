@@ -4,7 +4,7 @@ local keymap = vim.keymap -- for conciseness
 
 -- Neovim
 keymap.set("n", "<esc>", "<cmd>nohl<cr>")
-keymap.set("n", "<C-q>", "<cmd>qa!<CR>", { desc = "Close Neovim" })
+keymap.set("n", "<leader>q", "<cmd>qa!<CR>", { desc = "Close Neovim" })
 keymap.set("n", "<leader>w", "<cmd>wa<CR>", { desc = "Save Changes" })
 
 -- Clipboard operations
@@ -24,7 +24,7 @@ keymap.set("n", "<C-l>", "<C-w>l", { desc = "Change window to right" })
 keymap.set("n", "<C-h>", "<C-w>h", { desc = "Change window to left" })
 keymap.set("n", "<C-j>", "<C-w>j", { desc = "Change window to bottom" })
 keymap.set("n", "<C-k>", "<C-w>k", { desc = "Change window to top" })
-keymap.set("n", "<C-x>", "<cmd>close<CR>", { desc = "Close current split" })
+keymap.set("n", "<C-q>", "<cmd>close<CR>", { desc = "Close current split" })
 
 -- splits management
 keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })

@@ -3,14 +3,13 @@ return {
 	dependencies = {
 		"ibhagwan/fzf-lua",
 		"MunifTanjim/nui.nvim",
-		"stevearc/oil.nvim",
 		"nvim-treesitter/nvim-treesitter",
 	},
 	config = function()
 		require("xcodebuild").setup({
-      logs = {
-        auto_open_on_failed_build = false
-      },
+			logs = {
+				auto_open_on_failed_build = false,
+			},
 			integrations = {
 				pymobiledevice = {
 					enabled = true,
