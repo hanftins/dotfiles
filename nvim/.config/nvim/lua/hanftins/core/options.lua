@@ -1,10 +1,7 @@
-
 local opt = vim.opt -- for conciseness
 
 opt.exrc = true
 opt.secure = true
-
-opt.winbar = '%{%v:lua.require("nvim-navic").get_location()%}'
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
