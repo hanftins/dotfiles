@@ -1,5 +1,7 @@
-theme = Rose Pine Dawn
+theme = Rose Pine Moon
 font-family = Iosevka Term
-font-size = 15
 maximize = true
 macos-option-as-alt = true
+background-image = square.jpg
+background-image-opacity = 0.03
+background-image-fit = cover
