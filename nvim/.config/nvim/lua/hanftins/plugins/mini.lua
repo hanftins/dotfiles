@@ -80,7 +80,6 @@ return {
 			})
 
 			require("mini.trailspace").setup()
-			require("mini.jump").setup()
 		end,
 	},
 }
