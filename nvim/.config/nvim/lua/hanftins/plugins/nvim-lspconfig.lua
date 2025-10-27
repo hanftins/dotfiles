@@ -69,5 +69,11 @@ return {
 			on_attach = on_attach,
 			cmd = { vim.trim(vim.fn.system("xcrun -f sourcekit-lsp")) },
 		})
+
+		vim.g.rustaceanvim = {
+			server = {
+				on_attach = on_attach,
+			},
+		}
 	end,
 }

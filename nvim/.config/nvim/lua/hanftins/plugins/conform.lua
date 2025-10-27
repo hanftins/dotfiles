@@ -8,6 +8,7 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				swift = { "swiftformat" },
+				rust = { "rustfmt" },
 			},
 			format_on_save = function()
 				return { timeout_ms = 3000, lsp_fallback = true }
