@@ -10,11 +10,6 @@ return {
 			-- 	-- Format: "#RRGGBB" (hex without alpha)
 			-- 	mixing_color = "#FFFFFF", -- White for light themes; adjust to your bg color like "#F0F0F0"
 			-- },
-			options = {
-				multilines = {
-					enabled = true,
-				},
-			},
 		})
 		vim.diagnostic.config({
 			signs = false,

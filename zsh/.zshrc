@@ -123,6 +123,5 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source $(brew --prefix)/share/zsh-autopair/autopair.zsh
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
