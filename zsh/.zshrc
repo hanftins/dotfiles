@@ -78,7 +78,8 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-vi-mode zsh-autosuggestions zsh-syntax-highlighting)
+
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -118,3 +119,10 @@ fi
 [[ ! -f ~/dotfiles/zsh/.p10k.zsh ]] || source ~/dotfiles/zsh/.p10k.zsh
 eval "$(zoxide init zsh)"
 export XDG_CONFIG_HOME="$HOME/.config"
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
+source $(brew --prefix)/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+fpath=($(brew --prefix)/share/zsh-completions $fpath)
