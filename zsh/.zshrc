@@ -121,7 +121,9 @@ eval "$(zoxide init zsh)"
 export XDG_CONFIG_HOME="$HOME/.config"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+ZVM_VI_SURROUND_BINDKEY=s-prefix
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
-source $(brew --prefix)/share/zsh-autopair/autopair.zsh
+
 fpath=($(brew --prefix)/share/zsh-completions $fpath)

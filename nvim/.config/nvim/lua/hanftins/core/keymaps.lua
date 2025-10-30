@@ -4,7 +4,7 @@ local keymap = vim.keymap -- for conciseness
 
 -- Neovim
 keymap.set("n", "<esc>", "<cmd>nohl<cr>")
-keymap.set("n", "<leader>q", "<cmd>qa!<CR>", { desc = "Close Neovim" })
+keymap.set("n", "<leader>q", "<cmd>qa<CR>", { desc = "Close Neovim" })
 keymap.set("n", "<leader>w", "<cmd>wa<CR>", { desc = "Save Changes" })
 
 -- Clipboard operations
@@ -31,12 +31,6 @@ keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 
--- resize with arrows
-keymap.set("n", "<A-Down>", "<cmd>resize -4<cr>", { desc = "Smaller horizontal split" })
-keymap.set("n", "<A-Up>", "<cmd>resize +4<cr>", { desc = "Bigger horizontal split" })
-keymap.set("n", "<A-Left>", "<cmd>vertical resize -4<cr>", { desc = "Smaller vertical split" })
-keymap.set("n", "<A-Right>", "<cmd>vertical resize +4<cr>", { desc = "Bigger vertical split" })
-
 -- tabs management
 keymap.set("n", "<leader>tn", "<cmd>tabnew<CR>", { desc = "Open new tab" })
 keymap.set("n", "<leader>td", "<cmd>tabclose<CR>", { desc = "Close current tab" })
@@ -44,8 +38,6 @@ keymap.set("n", "]t", "<cmd>tabn<CR>", { desc = "Go to next tab" })
 keymap.set("n", "[t", "<cmd>tabp<CR>", { desc = "Go to previous tab" })
 
 -- buffers management
-keymap.set("n", "<C-]>", "<cmd>bn<CR>", { desc = "Go to next buffer" })
-keymap.set("n", "<C-[>", "<cmd>bp<CR>", { desc = "Go to previous buffer" })
 keymap.set("n", "<leader>bn", "<cmd>new<CR>", { desc = "New buffer" })
 keymap.set("n", "<leader>bd", "<cmd>bd<CR>", { desc = "Close current buffer" })
 keymap.set("n", "<leader>bx", "<cmd>%bd|e#|bd#<CR>", { desc = "Close all buffers but this" })

@@ -3,7 +3,24 @@ return {
 		"echasnovski/mini.nvim",
 		version = false, -- always latest
 		config = function()
-			require("mini.files").setup()
+			require("mini.files").setup({
+				windows = {
+					preview = true,
+					width_focus = 50,
+					width_preview = 70,
+				},
+				content = {
+					prefix = function(fs_entry)
+						local stat = vim.loop.fs_stat(fs_entry.path)
+						if not stat then
+							return ""
+						end
+
+						local date_str = os.date("%d %b %Y %H:%M", stat.mtime.sec)
+						return string.format("%s ", date_str)
+					end,
+				},
+			})
 
 			vim.keymap.set("n", "<leader>e", function()
 				MiniFiles.open(vim.api.nvim_buf_get_name(0))
@@ -64,7 +81,6 @@ return {
 				MiniSessions.select("delete")
 			end, { desc = "Delete Session" })
 
-			require("mini.pairs").setup()
 			require("mini.splitjoin").setup()
 			require("mini.surround").setup()
 			require("mini.cursorword").setup({

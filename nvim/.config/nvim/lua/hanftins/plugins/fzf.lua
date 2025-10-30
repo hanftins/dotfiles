@@ -16,10 +16,12 @@ return {
 				-- Auto-generate the rest based on your theme
 				true,
 			},
-			-- grep = {
-			-- 	rg_opts = "--hidden --no-heading --line-number --column --color=never",
-			-- 	glob_flag = "--iglob", -- Case-insensitive globbing
-			-- },
+			grep = {
+				rg_glob = true,
+				glob_flag = "--iglob",
+				glob_separator = "%s%-%-",
+				rg_opts = "--column --line-number --no-heading --color=always --smart-case --hidden -g '!.git/'",
+			},
 		})
 
 		-- set keymaps
