@@ -122,6 +122,35 @@ export XDG_CONFIG_HOME="$HOME/.config"
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+my_zvm_vi_put_after() {
+    CUTBUFFER=$(pbpaste)
+    zvm_vi_put_after
+    zvm_highlight clear # zvm_vi_put_after introduces weird highlighting
+}
+
+my_zvm_vi_put_before() {
+    CUTBUFFER=$(pbpaste)
+    zvm_vi_put_before
+    zvm_highlight clear # zvm_vi_put_before introduces weird highlighting
+}
+
+my_zvm_vi_replace_selection() {
+    CUTBUFFER=$(pbpaste)
+    zvm_vi_replace_selection
+    echo -en "${CUTBUFFER}" | pbcopy
+}
+
+zvm_after_lazy_keybindings() {
+    zvm_define_widget my_zvm_vi_put_after
+    zvm_define_widget my_zvm_vi_put_before
+    zvm_define_widget my_zvm_vi_replace_selection
+
+    zvm_bindkey vicmd 'P' my_zvm_vi_put_before
+    zvm_bindkey vicmd 'p' my_zvm_vi_put_after
+
+    zvm_bindkey visual 'p' my_zvm_vi_replace_selection
+}
+
 ZVM_VI_SURROUND_BINDKEY=s-prefix
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
