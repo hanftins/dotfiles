@@ -6,12 +6,12 @@ return {
 			layouts = {
 				{
 					elements = { "scopes", "breakpoints", "stacks" },
-					size = 60, -- Default width
+					size = 60,
 					position = "left",
 				},
 				{
 					elements = { "repl", "console" },
-					size = 0.25, -- Default height
+					size = 0.25,
 					position = "bottom",
 				},
 			},
