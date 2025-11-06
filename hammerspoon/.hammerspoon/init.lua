@@ -3,10 +3,12 @@ MODIFIERS = { "cmd" } -- Modifiers used for app shortcuts
 
 -- App configuration
 APPS = {
-	{ shortcut = "1", name = "Ghostty" },
+	{ shortcut = "`", name = "Ghostty" },
+	{ shortcut = "1", name = "Xcode" },
 	{ shortcut = "2", name = "Simulator" },
 	{ shortcut = "3", name = "Safari" },
 	{ shortcut = "4", name = "Finder" },
+	{ shortcut = "5", name = "Notes" },
 }
 
 -- Bind application shortcuts

@@ -6,7 +6,7 @@ return {
 			require("mini.files").setup({
 				windows = {
 					preview = true,
-					width_focus = 50,
+					width_focus = 70,
 					width_preview = 70,
 				},
 				content = {
