@@ -16,7 +16,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -156,6 +155,8 @@ ZVM_SYSTEM_CLIPBOARD_ENABLED=true
 source $(brew --prefix)/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
 fpath=($(brew --prefix)/share/zsh-completions $fpath)
+
+source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 gif() {
     # Based on https://gist.github.com/SheldonWangRJT/8d3f44a35c8d1386a396b9b49b43c385
