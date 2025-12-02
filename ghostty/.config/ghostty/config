@@ -1,8 +1,8 @@
 theme = Rose Pine
 font-family = Iosevka Term
 maximize = true
-font-size = 17
+font-size = 20
 macos-option-as-alt = true
-background-image = interstella.jpg
-background-image-opacity = 0.2
+background-image = first_sunday.jpg
+background-image-opacity = 0.12
 background-image-fit = cover

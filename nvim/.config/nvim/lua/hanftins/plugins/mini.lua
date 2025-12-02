@@ -19,6 +19,21 @@ return {
 						local date_str = os.date("%d %b %Y %H:%M", stat.mtime.sec)
 						return string.format("%s ", date_str)
 					end,
+					sort = function(entries)
+						local mtimes = {}
+						local uv = vim.uv
+
+						for _, entry in ipairs(entries) do
+							local stat = uv.fs_stat(entry.path)
+							mtimes[entry.path] = stat and stat.mtime.sec or 0
+						end
+
+						table.sort(entries, function(a, b)
+							return mtimes[a.path] > mtimes[b.path]
+						end)
+
+						return entries
+					end,
 				},
 			})
 

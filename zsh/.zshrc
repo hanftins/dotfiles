@@ -163,3 +163,6 @@ gif() {
     output_file="$1.gif"
     ffmpeg -i $1 -pix_fmt rgb8 -r 10 $output_file && gifsicle -O3 $output_file -o $output_file
 }
+
+# Created by `pipx` on 2025-11-19 06:41:11
+export PATH="$PATH:/Users/khoa.tr/.local/bin"
